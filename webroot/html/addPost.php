@@ -10,7 +10,7 @@
         $content = $a->content;
         $date = $a->date;
 
-        $request = "insert into blog ( Date, Title, Content ) values ('".$date."', '".$title."', '".$content."')";
+        $request = "insert into blog ( date, title, content ) values ('".$date."', '".$title."', '".$content."')";
         $queryResult = mysqli_query($conn, $request);
 
         if ($queryResult) {

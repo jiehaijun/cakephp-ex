@@ -17,7 +17,7 @@
         <nav>
             <ul>
                 <li><a href="#">Portfolio</a></li>
-                <li><a href="html/viewBlog.html">Blog</a></li>
+                <li><a href="html/login.html">Blog</a></li>
             </ul>
         </nav>
 
