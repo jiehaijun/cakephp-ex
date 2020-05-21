@@ -1,13 +1,13 @@
 <?php
     session_start();
     include("conn.php");
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $result = mysqli_query($conn, "SELECT IFNULL((SELECT 'Y' from user where email = '".$email."' AND password = '".$password."' limit 1),'N')");
-    $row=mysqli_fetch_row($result);
-    echo $row[0];
-    if ($row[0] == 'Y') {
-        $url = "addPost.html?email="+$email;
+    
+    $sql="select * from user where email='$_POST[email]'and password='$_POST[password]'";
+    $result=mysqli_query($conn,$sql);
+    $row=mysqli_fetch_assoc($result);
+
+    if ($row==true) {
+        $url = "addPost.html?email="+$_POST['email'];
     }else{
         $url = "login.html";
     }
