@@ -8,10 +8,14 @@
 
     if ($row==true) {
         $url = "addPost.html?email="+$_POST['email'];
+        echo "<script type='text/javascript'>";
+        echo "window.location.href='$url'";
+        echo "</script>"; 
     }else{
         $url = "login.html";
+        echo "<script type='text/javascript'>";
+        echo "window.location.href='$url'";
+        echo "</script>"; 
     }
-    echo "<script type='text/javascript'>";
-    echo "window.location.href='$url'";
-    echo "</script>"; 
+    
 ?>
